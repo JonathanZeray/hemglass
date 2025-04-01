@@ -1,9 +1,34 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Burbank";
+  src: url("../src/assets/fonts/burbankbigcondensed-bold-2.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bariol-bold";
+  src: url("../src/assets/fonts/bariol_bold-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 #root {
   max-width: 1280px;
   margin: 0;
   padding: 0;
   text-align: center;
   box-sizing: border-box;
+}
+
+@theme {
+  --font-burbank: Burbank, "sans-serif";
+  --font-bariol: Bariol-bold, "sans-serif";
+  --color-hemglass-darkblue: #003a70;
+  --color-hemglass-lightblue: #8dc6e8;
+  --color-hemglass-white: #ffffff;
 }
