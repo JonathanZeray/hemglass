@@ -1,6 +1,7 @@
 type ProductCardProps = {
   name: string;
   imageUrl: string;
+  quantity: number;
   price: number;
   onAddToCart?: () => void;
 };
@@ -8,6 +9,7 @@ type ProductCardProps = {
 const ProductCard = ({
   name,
   imageUrl,
+  quantity,
   price,
   onAddToCart,
 }: ProductCardProps) => {
@@ -20,15 +22,18 @@ const ProductCard = ({
         alt={name}
         className="w-full aspect-[4/3] object-contain rounded-xl"
       />
-      <h2 className="text-lg font-burbank text-hemglass-darkblue">{name}</h2>
-      <p className="font-bariol text-base text-hemglass-darkblue">
+      <h2 className="text-3xl font-burbank text-hemglass-darkblue">{name}</h2>
+      <p className="font-bariol text-base text-hemglass-darkblue -mb-2 ">
+        {quantity}st
+      </p>
+      <p className="font-bariol text-lg text-hemglass-darkblue">
         {formattedPrice}
       </p>
       <button
         onClick={onAddToCart}
-        className="bg-hemglass-darkblue text-hemglass-white font-bariol px-4 py-2 rounded-full hover:brightness-110 transition"
+        className="bg-hemglass-darkblue text-hemglass-white font-bariol text-base sm:text-sm px-4 sm:px-2 py-2 sm:py-1 rounded-full hover:brightness-110 transition"
       >
-        Lägg till i varukorgen
+        Lägg i varukorgen
       </button>
     </div>
   );
