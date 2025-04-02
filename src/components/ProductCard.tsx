@@ -30,7 +30,7 @@ const ProductCard = ({
         <img
           src={imageUrl}
           alt={name}
-          className="w-full aspect-[4/3] object-contain rounded-xl"
+          className="w-full aspect-[4/3] object-contain rounded-xl transition-transform duration-300 hover:scale-105"
         />
       </div>
       <h2 className="text-3xl font-burbank text-hemglass-darkblue -mb-2">
