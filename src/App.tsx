@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ProductGrid from "./components/ProductGrid";
 import { fetchProducts } from "./services/api";
 import { Product } from "./types/product";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -28,9 +29,12 @@ function App() {
   if (error) return <p className="p-4 text-red-600">{error}</p>;
 
   return (
-    <main className="p-4 bg-hemglass-white min-h-screen">
-      <ProductGrid products={products} />
-    </main>
+    <>
+      <Navbar />
+      <main className="p-4 bg-hemglass-white min-h-screen">
+        <ProductGrid products={products} />
+      </main>
+    </>
   );
 }
 
