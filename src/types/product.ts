@@ -9,6 +9,9 @@ export type Product = {
     id: string;
     preview: string;
   };
+  backgroundImgCard?: {
+    preview: string;
+  };
   priceWithTax: {
     min: number;
     max: number;

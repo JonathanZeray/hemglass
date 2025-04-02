@@ -17,6 +17,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
             key={product.productId}
             name={product.productName}
             imageUrl={product.productAsset.preview}
+            backgroundImageUrl={product.backgroundImgCard?.preview}
             price={product.priceWithTax.min}
             quantity={quantity}
             onAddToCart={() => console.log(`Added ${product.productName}`)}

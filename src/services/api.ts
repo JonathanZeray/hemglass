@@ -17,6 +17,9 @@ const PRODUCTS_QUERY = `
           id
           preview
         }
+        backgroundImgCard {
+         preview
+        }
         priceWithTax {
           ... on PriceRange {
             min
