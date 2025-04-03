@@ -20,7 +20,7 @@ const ProductCard = ({
   return (
     <div className="bg-hemglass-white flex flex-col items-center gap-2 text-center">
       <div
-        className="shadow p-4 flex flex-col items-center space-y-2 text-center rounded-xl bg-cover bg-center bg-no-repeat bg-hemglass-lightblue h-[300px] flex justify-center"
+        className="shadow p-4 flex flex-col items-center space-y-2 text-center rounded-xl bg-cover bg-center bg-no-repeat bg-hemglass-lightblue min-h-[300px] flex justify-center"
         style={{
           backgroundImage: backgroundImageUrl
             ? `url(${backgroundImageUrl})`
