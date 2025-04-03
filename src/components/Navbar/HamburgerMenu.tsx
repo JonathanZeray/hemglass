@@ -9,7 +9,7 @@ export default function HamburgerMenu({
 }: HamburgerMenuProps) {
   return (
     <button
-      className="lg:hidden text-white z-2"
+      className="lg:hidden w-1/3 flex text-hemglass-white z-2"
       onClick={toggleMenu}
       aria-label={isOpen ? "Stäng meny" : "Öppna meny"}
     >

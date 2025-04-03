@@ -12,10 +12,7 @@ type Props = {
 export default function NavbarLayout({ isMenuOpen, toggleMenu }: Props) {
   return (
     <div className="flex w-full items-center lg:gap-12 px-3 sm:px-8 lg:px-12 py-2 lg:py-4">
-      <div className="lg:hidden w-1/3 flex">
-        <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      </div>
-
+      <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <div className="w-1/3 lg:w-fit flex justify-center lg:justify-start">
         <img
           src={hemglassLogo}
