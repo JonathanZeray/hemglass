@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ProductGrid from "./components/ProductGrid";
 import { fetchProducts } from "./services/api";
 import { Product } from "./types/product";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
