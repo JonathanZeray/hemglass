@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type ProductCardProps = {
   name: string;
   imageUrl: string;
@@ -18,7 +20,13 @@ const ProductCard = ({
   const formattedPrice = `${price / 100} kr`;
 
   return (
-    <div className="bg-hemglass-white flex flex-col h-full items-center gap-2 text-center">
+    <motion.div
+      initial={{ opacity: 0.15, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-hemglass-white flex flex-col h-full items-center gap-2 text-center"
+    >
       <div
         className="shadow p-4 flex flex-col items-center space-y-2 text-center rounded-xl bg-cover bg-center bg-no-repeat bg-hemglass-lightblue min-h-[325px] flex justify-center"
         style={{
@@ -48,7 +56,7 @@ const ProductCard = ({
       >
         Lägg i varukorgen
       </button>
-    </div>
+    </motion.div>
   );
 };
 
