@@ -11,7 +11,7 @@ type Props = {
 
 export default function NavbarLayout({ isMenuOpen, toggleMenu }: Props) {
   return (
-    <div className="flex w-full items-center lg:gap-12 px-3 sm:px-8 lg:px-12 py-2 lg:py-4">
+    <div className="flex w-full items-center lg:gap-12 px-3 sm:px-8 lg:px-20 py-2 lg:py-3">
       <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <div className="w-1/3 lg:w-fit flex justify-center lg:justify-start">
         <img
@@ -43,7 +43,7 @@ export default function NavbarLayout({ isMenuOpen, toggleMenu }: Props) {
         </a>
       </nav>
 
-      <div className="w-1/3 lg:w-fit flex lg:ml-auto justify-end gap-1 text-hemglass-white">
+      <div className="w-1/3 lg:w-fit flex lg:ml-auto justify-end gap-1 lg:gap-3 text-hemglass-white">
         <div className={isMenuOpen ? "invisible" : "visible"}>
           <AccountIcon />
         </div>
