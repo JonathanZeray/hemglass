@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50">
       <div className="relative w-full bg-hemglass-darkblue">
         <NavbarLayout isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-        {isMenuOpen && <MobileMenu />}
+        <MobileMenu isVisible={isMenuOpen} />
       </div>
       <SubNavbar />
     </nav>
