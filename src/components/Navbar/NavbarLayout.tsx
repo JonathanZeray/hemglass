@@ -1,8 +1,8 @@
 import HamburgerMenu from "./HamburgerMenu";
 import { AccountIcon, CartIcon } from "./Icons";
+import { PrimaryMenuItems } from "./MenuItems";
 import hemglassLogo from "../../assets/images/hemglass-logo.png";
 import hemglassTextLogo from "../../assets/images/hemglass_text.svg";
-import { PrimaryMenuItems } from "./MenuItems";
 
 type Props = {
   isMenuOpen: boolean;
@@ -25,13 +25,22 @@ export default function NavbarLayout({ isMenuOpen, toggleMenu }: Props) {
           className="hidden lg:block w-16 z-20"
         />
       </div>
-      <nav className="hidden lg:flex text-hemglass-white font-burbank text-2xl gap-12">
+      <nav className="hidden lg:flex text-hemglass-white font-burbank text-2xl gap-4">
         {PrimaryMenuItems.map((text) => (
-          <a key={text} href="#">
+          <a
+            key={text}
+            href="#"
+            className="hover:bg-hemglass-darkblue-hover p-4 rounded-4xl"
+          >
             {text}
           </a>
         ))}
-        <a href="#">Fler sidor</a>
+        <a
+          href="#"
+          className="hover:bg-hemglass-darkblue-hover p-4 rounded-4xl"
+        >
+          Fler sidor
+        </a>
       </nav>
 
       <div className="w-1/3 lg:w-fit flex lg:ml-auto justify-end gap-1 text-hemglass-white">
