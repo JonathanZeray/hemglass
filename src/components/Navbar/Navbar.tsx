@@ -3,7 +3,11 @@ import NavbarLayout from "./NavbarLayout";
 import MobileMenu from "./MobileMenu";
 import SubNavbar from "./SubNavbar";
 
-export default function Navbar() {
+type Props = {
+  cart: string[];
+};
+
+export default function Navbar({ cart }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
@@ -15,7 +19,11 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50">
       <div className="relative w-full bg-hemglass-darkblue">
-        <NavbarLayout isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+        <NavbarLayout
+          cart={cart}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+        />
         <MobileMenu isVisible={isMenuOpen} />
       </div>
       <SubNavbar />

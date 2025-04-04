@@ -4,9 +4,10 @@ import { extractQuantity } from "../utils/extractQuantity";
 
 type ProductGridProps = {
   products: Product[];
+  onAddToCart: (productName: string) => void;
 };
 
-const ProductGrid = ({ products }: ProductGridProps) => {
+const ProductGrid = ({ products, onAddToCart }: ProductGridProps) => {
   return (
     <>
       <h2 className="font-burbank text-hemglass-darkblue text-5xl w-full text-left py-8">
@@ -34,7 +35,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
               backgroundImageUrl={product.backgroundImgCard?.preview}
               price={product.priceWithTax.min}
               quantity={quantity}
-              onAddToCart={() => console.log(`Added ${product.productName}`)}
+              onAddToCart={() => onAddToCart(product.productName)}
             />
           );
         })}

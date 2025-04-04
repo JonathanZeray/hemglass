@@ -7,9 +7,10 @@ import hemglassTextLogo from "../../assets/images/hemglass_text.svg";
 type Props = {
   isMenuOpen: boolean;
   toggleMenu: () => void;
+  cart: string[];
 };
 
-export default function NavbarLayout({ isMenuOpen, toggleMenu }: Props) {
+export default function NavbarLayout({ isMenuOpen, toggleMenu, cart }: Props) {
   return (
     <div className="flex w-full items-center lg:gap-12 px-3 sm:px-8 lg:px-20 py-2 lg:py-3">
       <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
@@ -44,12 +45,19 @@ export default function NavbarLayout({ isMenuOpen, toggleMenu }: Props) {
       </nav>
 
       <div className="w-1/3 lg:w-fit flex lg:ml-auto justify-end gap-1 lg:gap-3 text-hemglass-white">
-        <div className={isMenuOpen ? "invisible" : "visible"}>
-          <AccountIcon />
-        </div>
-        <div className={isMenuOpen ? "invisible" : "visible"}>
-          <CartIcon />
-        </div>
+        {!isMenuOpen && (
+          <>
+            <AccountIcon />
+            <div className="relative inline-flex items-center justify-center">
+              <CartIcon />
+              {cart.length !== 0 && (
+                <span className="absolute -top-0 -right-1 bg-[#159FDB] text-white text-xs px-1 rounded-full">
+                  {cart.length}
+                </span>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
