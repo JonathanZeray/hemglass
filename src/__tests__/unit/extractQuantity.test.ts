@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { extractQuantity } from "./extractQuantity";
+import { extractQuantity } from "../../utils/extractQuantity";
 
 describe("extractQuantity", () => {
   it("returns correct quantity for valid input with spacing", () => {
