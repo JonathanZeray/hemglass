@@ -1,4 +1,3 @@
-// src/components/ProductGrid.test.tsx
 import { render, screen } from "@testing-library/react";
 import ProductGrid from "../../components/ProductGrid";
 import { describe, it, expect } from "vitest";
@@ -47,7 +46,7 @@ describe("ProductGrid", () => {
   ];
 
   it("renders correct number of product cards with correct content", () => {
-    render(<ProductGrid products={mockProducts} />);
+    render(<ProductGrid products={mockProducts} onAddToCart={() => {}} />);
 
     expect(screen.getAllByRole("img").length).toBe(2);
 
