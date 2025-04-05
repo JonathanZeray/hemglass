@@ -52,7 +52,7 @@ const ProductCard = ({
       </p>
       <button
         onClick={onAddToCart}
-        className="mt-auto bg-hemglass-darkblue text-hemglass-white font-bariol text-base sm:text-sm px-4 sm:px-2 py-2 sm:py-1 rounded-full hover:brightness-110 transition"
+        className="mt-auto bg-hemglass-darkblue text-hemglass-white font-bariol text-base sm:text-sm px-4 sm:px-2 py-2 sm:py-1 rounded-full cursor-pointer hover:opacity-90 transition"
       >
         Lägg i varukorgen
       </button>

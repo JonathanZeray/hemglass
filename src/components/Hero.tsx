@@ -2,7 +2,7 @@ import hemglassHeroImg from "../assets/images/hemglass-hero-img.jpg";
 
 export default function Hero() {
   return (
-    <div className="bg-hemglass-white flex flex-col mt-8 mb-16 lg:mb-32 px-4 lg:px-20">
+    <div className="bg-hemglass-white flex flex-col mt-8 mb-16 lg:mb-20 px-4 lg:px-20">
       <h2 className="font-burbank text-hemglass-darkblue text-5xl lg:text-6xl lg:pt-4 mb-16 w-full text-left">
         Välkommen till glassbutiken!
       </h2>
@@ -19,7 +19,7 @@ export default function Hero() {
           <p className="text-hemglass-darkblue font-bariol">
             Så här funkar det: Lägg produkterna du vill ha i varukorgen, betala,
             sen hämtar du ut dem nästa gång Hemglassbilen kommer till dig.
-            Självklart får du ett SMS när bilen är på väg!​
+            Självklart får du ett SMS när bilen är på väg!
           </p>
         </div>
       </div>
