@@ -1,4 +1,4 @@
-import hemglassHeroImg from "../assets/images/hemglass-hero-img.jpg";
+import hemglassHeroImg from "../assets/images/hemglass-hero-img.webp";
 
 export default function Hero() {
   return (
